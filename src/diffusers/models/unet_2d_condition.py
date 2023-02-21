@@ -119,6 +119,7 @@ class UNet2DConditionModel(ModelMixin, ConfigMixin):
 
         # input
         self.conv_in = nn.Conv2d(in_channels, block_out_channels[0], kernel_size=3, padding=(1, 1))
+        print("TOTO")
 
         # time
         self.time_proj = Timesteps(block_out_channels[0], flip_sin_to_cos, freq_shift)
